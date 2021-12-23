@@ -1,0 +1,39 @@
+@import 'Variable';
+
+.navbar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $background1;
+    position: relative;
+    width: 80%;
+    margin: auto;
+    .logo {
+        padding: 3em 0;
+    }
+    .menu{
+        display: flex;
+        list-style: none;
+        flex-grow: 1;
+        margin-left: 3em;
+        li{
+            padding: 3em 1em;
+            color: $paragraph;
+            font-weight: 400;
+            &:hover {
+                color: $heading;
+                border-bottom: 4px solid $primary;
+                cursor: pointer;
+                transition: border 0.2s;
+            }
+        }
+    }
+    .avatar {
+        width: 50px;
+        border-radius:50%;
+        cursor: pointer;
+        &:hover{
+            border: 2px solid $primary;
+            transition: border 0.2s;
+        }
+    }
+}

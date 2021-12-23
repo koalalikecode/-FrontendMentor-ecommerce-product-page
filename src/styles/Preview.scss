@@ -1,0 +1,85 @@
+@import 'Variable';
+
+.preview{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding-top: 3em;
+    display: none;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    .image-preview-container{
+        max-width: 550px;
+        position: relative;
+        .close-btn{
+            filter: brightness(0) invert(1);
+            position: absolute;
+            right: 0;
+            top: -2.5em;
+            width: 20px;
+            &:hover{
+                filter: invert(72%) sepia(62%) saturate(5301%) hue-rotate(348deg) brightness(103%) contrast(101%);
+                cursor: pointer;
+            }
+        }
+        .previous-btn{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            width: 4em;
+            height: 4em;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            &:hover > img{
+                filter: invert(72%) sepia(62%) saturate(5301%) hue-rotate(348deg) brightness(103%) contrast(101%);
+                cursor: pointer;
+            }
+        }
+        .next-btn{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            width: 4em;
+            height: 4em;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            &:hover > img{
+                filter: invert(72%) sepia(62%) saturate(5301%) hue-rotate(348deg) brightness(103%) contrast(101%);
+                cursor: pointer;
+            }
+        }
+        .product-image-preview{
+            width: 100%;
+            border-radius: 15px;
+        }
+    }
+    .product-thumbnail-preview{
+        max-width: 550px;
+        display: flex;
+        margin-top: 2.5em;
+        justify-content: space-between;
+        padding: 0 3em;
+        .thumbnail-preview{
+            width: 20%;
+            border-radius: 10px;
+            &:hover{
+                cursor: pointer;
+                opacity:0.7;
+                transition: opacity 0.4s;
+            }
+        }
+        .active {
+            filter: brightness(1.2);
+            border: 2px solid $primary;
+        }
+    }
+}
+.preview-active{
+    display: none
+}

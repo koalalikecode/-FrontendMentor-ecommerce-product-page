@@ -1,0 +1,106 @@
+@import 'Variable';
+
+.cart-container{
+    margin: 0 3em;
+    .notification{
+        position: relative;
+        span{
+            display: none;
+            position: absolute;
+            top: -6px;
+            left: 10px;
+            background-color:$primary;
+            color: white;
+            font-size: 10px;
+            z-index: 1;
+            padding: 0 6px;
+            border-radius: 8px;
+            
+        }
+    }
+    .cart-logo {
+        opacity: 0.7;
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+    .cart {
+        position: absolute;
+        background-color: white;
+        width: 380px;
+        height: 260px;
+        right: -80px;
+        top: 100px;
+        border-radius: 10px;
+        box-shadow: $background1 0 10px 20px 0px;
+        .cart-name{
+            padding: 1.5em;
+            border-bottom: 1px solid $background1;
+            font-weight: 700;
+        }
+        .cart-info{
+            display:none;
+            padding: 1.5em 1.5em 2em;
+            .product-info{
+                display:flex;
+                align-items: center;
+                justify-content: space-between;
+                .cart-product-img{
+                    width: 55px;
+                    border-radius:5px;
+                }
+                .name-price{
+                    p{
+                       color: $paragraph;
+                       line-height: 1.6;
+                    }
+                    span{
+                       color: $paragraph;
+                       line-height: 1.6;
+                       &:last-child{
+                           margin-left: 0.5em;
+                           color: black;
+                           font-weight: 700;
+                       }
+                    }
+                }
+                .delete-icon:hover{
+                    cursor: pointer;
+                    opacity: 0.7;
+                }
+            }
+            .check-out{
+                margin-top: 1.6rem;
+                width: 100%;
+                height: 3.5rem;
+                border-radius: 10px;
+                border: none;
+                background-color: $primary;
+                color: white;
+                font-size: 15px;
+                font-weight: 700;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        .cart-empty{
+            text-align: center;
+            padding: 5em 0;
+            color: $paragraph;
+            font-weight: 700;
+        }
+    }
+    .active{
+        display: block;
+    }
+    .not-empty{
+        .cart-info{
+            display: block;
+        }
+        .cart-empty{
+            display: none;
+        }
+    }
+}
