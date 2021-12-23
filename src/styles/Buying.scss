@@ -46,3 +46,26 @@
         }
     }
 }
+
+@media (max-width: 500px){
+    .buying{
+        flex-direction: column;
+        margin-top: 1.5em;
+        .quantity{
+            width: 100%;
+            img{
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+        .add-btn{
+            width: 100%;
+            margin-left: 0;
+            margin-top: 1em;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}

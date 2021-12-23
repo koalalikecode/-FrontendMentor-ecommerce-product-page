@@ -104,3 +104,24 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .cart-container{
+        .cart{
+            right: 5%;
+            z-index: 1;
+            top: 80px;
+            box-shadow: none;
+        }
+    }
+}
+@media (max-width: 500px) {
+    .cart-container{
+        .cart{
+            right: 50%;
+            transform: translateX(50%);
+            top: 80px;
+            width: 95%;
+        }
+    }
+}

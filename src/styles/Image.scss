@@ -30,3 +30,20 @@
         }
     }
 }
+
+@media (max-width: 1190px) {
+    .image{
+        .product-image{
+            width: 90%;
+        }
+        .product-thumbnails{
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .image{
+        display: none;
+    }
+}

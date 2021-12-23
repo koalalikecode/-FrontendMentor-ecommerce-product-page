@@ -2,7 +2,7 @@
 
 .content{
     width: 50%;
-    padding: 4em;
+    padding: 0 4em;
     .intro{
         .company{
             color: $primary;
@@ -38,6 +38,45 @@
             font-weight: 700;
             color: $background1;
             text-decoration: line-through;
+        }
+    }
+}
+
+@media (max-width: 1190px) {
+    .content {
+        padding: 0 3em;
+        .intro {
+            .product-name {
+                font-size: 36px;
+            }
+        }
+    }
+}
+@media (max-width: 768px){
+    .content{
+        width: 100%;
+    }
+}
+@media (max-width: 500px){
+    .content{
+        padding: 0 1.5em;
+        .intro {
+            .product-name {
+                font-size: 28px;
+                margin: 8px 0 16px;
+            }
+            .description{
+                font-size:15px;
+            }
+            .price-container{
+                display: flex;
+                justify-content:space-between;
+                align-items:center;
+                margin-top: 1.5em;
+                .price{
+                    margin: 0;
+                }
+            }
         }
     }
 }

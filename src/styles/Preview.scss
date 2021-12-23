@@ -1,19 +1,20 @@
 @import 'Variable';
 
 .preview{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    bottom: 0;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.75);
     padding-top: 3em;
     display: none;
     flex-direction: column;
     justify-content:center;
     align-items: center;
+    z-index: 2;
     .image-preview-container{
-        max-width: 550px;
+        width: 35%;
         position: relative;
         .close-btn{
             filter: brightness(0) invert(1);
@@ -60,7 +61,7 @@
         }
     }
     .product-thumbnail-preview{
-        max-width: 550px;
+        width: 35%;
         display: flex;
         margin-top: 2.5em;
         justify-content: space-between;
@@ -80,6 +81,40 @@
         }
     }
 }
-.preview-active{
-    display: none
+
+@media (max-width:768px) {
+    .preview{
+        display: flex;
+        position: static;
+        height: auto;
+        padding-top: 0;
+        background-color: initial;
+        .image-preview-container{
+            width: 100%;
+            height: 45vh;
+            .close-btn{
+                display: none;
+            }
+            .previous-btn{
+                transform: translate(50%, -50%);
+                width: 3em;
+                height: 3em;
+            }
+            .product-image-preview{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 0;
+            }
+            .next-btn{
+                transform: translate(-150%, -50%);
+                width: 3em;
+                height: 3em;
+            }
+
+        }
+        .product-thumbnail-preview{
+            display: none;
+        }
+    }
 }
